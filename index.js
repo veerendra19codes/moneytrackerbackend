@@ -3,6 +3,7 @@ import cors from "cors";
 import {} from 'dotenv/config';
 import mongoose from "mongoose";
 import Transaction from "./models/Transaction.js";
+const PORT = process.env.PORT || 3001
 
 const app = express();
 
@@ -27,4 +28,4 @@ app.get("/api/transactions", async(req, res) => {
     res.json(transactions);
 })
 
-app.listen(3001);
+app.listen(PORT);
